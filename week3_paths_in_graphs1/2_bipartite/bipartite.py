@@ -122,7 +122,7 @@ def bipartite(graph):
     
     graph.make_shortest_path_tree(0)
 
-    # ensure all vertices are in some shortest path tree
+    # ensure all vertices are in some shortest path tree (if graph has multiple trees)
     for v in graph.vertices:
         if not v.dist_defined:
             graph.make_shortest_path_tree(v.index)
