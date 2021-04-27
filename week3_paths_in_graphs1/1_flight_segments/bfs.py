@@ -102,7 +102,6 @@ class Graph():
                 # set distance if it has not been previously discovered
                 v.dist = v.prev.dist + 1
                 v.dist_defined = True
-                # print(v.index, v.prev.index, v.dist)
 
                 # enqueue all its undiscovred neighbours
                 for neighbour in self.adj[v]:

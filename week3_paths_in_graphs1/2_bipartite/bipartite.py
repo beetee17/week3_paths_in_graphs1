@@ -107,7 +107,6 @@ class Graph():
                 # set distance if it has not been previously discovered
                 v.dist = v.prev.dist + 1
                 v.dist_defined = True
-                # print(v.index, v.prev.index, v.dist)
 
                 # enqueue all its undiscovred neighbours
                 for neighbour in self.adj[v]:
@@ -130,9 +129,9 @@ def bipartite(graph):
 
 
     for (a, b) in graph.edges:
-        # print(graph.vertices[a-1].dist, graph.vertices[b-1].dist)
-        # print(graph.vertices[a-1].origin.index, graph.vertices[b-1].origin.index)
+
         if graph.vertices[a-1].origin == graph.vertices[b-1].origin and graph.vertices[a-1].dist == graph.vertices[b-1].dist:
+
             # if there exists an edge between two vertices that are in the same layer of the same shortest path tree, the graph is not bipartite
             return 0
 
